@@ -1,2 +1,5 @@
 - name: Academic Website
-  url: https://www.juanrloaiza.com/
+  url: "https://www.juanrloaiza.com/"
+
+- name: Blog
+  url: "https://blog.juanrloaiza.com/"
