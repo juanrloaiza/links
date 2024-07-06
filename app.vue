@@ -20,8 +20,8 @@ const links: Array<Link> = data.value.body
 </script>
 
 <template>
-  <div class="min-h-screen bg-indigo-100">
-    <div class="container max-w-xl mx-auto py-20">
+  <div class="min-h-screen bg-gradient-to-b from-slate-300 to-slate-100">
+    <div class="container max-w-lg px-2 mx-auto py-20">
       <div class="flex flex-col justify-center items-center py-10 font-bold">
         <img src="assets/logo.png" class="w-28 bg-white rounded-full p-1" />
         <h1 class="text-4xl my-6">Juan R. Loaiza</h1>
@@ -30,7 +30,7 @@ const links: Array<Link> = data.value.body
       <div class="flex flex-col">
         <a v-for="link in links" :href="link.url">
           <div
-            class="flex justify-center items-center text-center py-5 px-8 border rounded-2xl m-2 hover:bg-indigo-300 text-xl font-semibold bg-white ">
+            class="flex justify-center items-center text-center py-5 px-8 border rounded-2xl m-2 hover:bg-slate-300 font-semibold bg-white text-lg">
 
             {{
               link.name
