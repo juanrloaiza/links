@@ -1,5 +1,16 @@
-- name: Academic Website
+- name: Página personal
   url: "https://www.juanrloaiza.com/"
+  icon: "fa-solid fa-globe "
 
 - name: Blog
   url: "https://blog.juanrloaiza.com/"
+
+- name: Santiago Mind and Cognition
+  url: https://www.santiagomindandcognition.cl
+  icon: 🧠
+
+- name: '"Vigilar las emociones con IA es un problema público" - CIPER Chile'
+  url: https://www.ciperchile.cl/2024/07/05/vigilar-las-emociones-con-ia-es-un-problema-publico/
+
+- name: '"Justicia por mano propia: ¿herramienta legítima?" - Interferencia'
+  url: https://interferencia.cl/articulos/justicia-por-mano-propia-herramienta-legitima
