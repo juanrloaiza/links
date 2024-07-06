@@ -6,7 +6,6 @@ const links = data.value.body
 </script>
 
 <template>
-  <Script src="https://kit.fontawesome.com/56ed2b6624.js" crossorigin="anonymous"></Script>
   <div class="min-h-screen bg-indigo-100">
     <div class="container max-w-xl mx-auto py-20">
       <div class="flex flex-col justify-center items-center py-10 font-bold">
