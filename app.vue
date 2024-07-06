@@ -35,7 +35,9 @@ const socialMedia: Array<Link> = socialMediaYAML.value.body
       <div class="flex flex-col">
         <a v-for="link in links" :href="link.url">
           <div
-            class="flex justify-center items-center text-center py-5 px-8 border rounded-2xl m-2 hover:bg-slate-300 font-semibold bg-white text-lg">
+            class="flex 
+            justify-center items-center text-center py-5 px-8 border-2 border-slate-300 rounded-2xl m-2 hover:bg-slate-300 font-semibold bg-white text-lg
+            ">
 
             {{
               link.name
