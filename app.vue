@@ -38,17 +38,15 @@ const socialMedia: Array<Link> = socialMediaYAML.value.body
             class="flex 
             justify-center items-center text-center py-5 px-8 border-2 border-slate-300 rounded-2xl m-2 hover:bg-slate-300 font-semibold bg-white text-lg
             ">
-
             {{
               link.name
             }}
-            <div></div>
           </div>
         </a>
       </div>
       <div class="flex justify-center my-8">
         <a 
-        class="hover:text-slate-500 text-2xl mx-2"
+        class="text-slate-700 hover:text-slate-500 text-3xl mx-2"
         v-for="socialLink in socialMedia"
         :href="socialLink.url">
         <i :class="socialLink.icon"/>
