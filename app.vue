@@ -1,7 +1,21 @@
 <script setup lang="ts">
-const { data } = await useAsyncData('linkslist', () => queryContent('/links').findOne())
+interface Link {
+  name: string,
+  url: string,
+  icon: string
+}
 
-const links = data.value.body
+interface YAMLArray {
+  body: Array<Link>
+}
+
+const { data } = await useAsyncData('linkslist', () => queryContent<YAMLArray>('/links').findOne())
+
+if (!data.value) {
+  throw new Error("No data received")
+}
+
+const links: Array<Link> = data.value.body
 
 </script>
 
