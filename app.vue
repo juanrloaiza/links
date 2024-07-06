@@ -9,17 +9,22 @@ interface YAMLArray {
   body: Array<Link>
 }
 
-const { data } = await useAsyncData('linkslist', () => queryContent<YAMLArray>('/links').findOne())
+const { data: treeLinksYAML } = await useAsyncData('linkslist', () => queryContent<YAMLArray>('/links').findOne())
 
-if (!data.value) {
+const { data: socialMediaYAML } = await useAsyncData('socialMediaLinks', () => queryContent<YAMLArray>('/social').findOne())
+
+if (!treeLinksYAML.value || !socialMediaYAML.value) {
   throw new Error("No data received")
 }
 
-const links: Array<Link> = data.value.body
+const links: Array<Link> = treeLinksYAML.value.body
+
+const socialMedia: Array<Link> = socialMediaYAML.value.body
 
 </script>
 
 <template>
+  <Script src="https://kit.fontawesome.com/56ed2b6624.js" crossorigin="anonymous" />
   <div class="min-h-screen bg-gradient-to-b from-slate-300 to-slate-100">
     <div class="container max-w-lg px-2 mx-auto py-20">
       <div class="flex flex-col justify-center items-center py-10 font-bold">
@@ -37,6 +42,14 @@ const links: Array<Link> = data.value.body
             }}
             <div></div>
           </div>
+        </a>
+      </div>
+      <div class="flex justify-center my-8">
+        <a 
+        class="hover:text-slate-500 text-2xl mx-2"
+        v-for="socialLink in socialMedia"
+        :href="socialLink.url">
+        <i :class="socialLink.icon"/>
         </a>
       </div>
     </div>

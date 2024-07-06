@@ -1,0 +1,19 @@
+- name: Instagram
+  icon: fa-brands fa-instagram
+  url: https://www.instagram.com/loaiza.filosofia/
+
+- name: Mastodon
+  icon: "fa-brands fa-mastodon"
+  url: https://hcommons.social/@juanrloaiza
+
+- name: Github
+  icon: fa-brands fa-github
+  url: https://github.com/juanrloaiza
+
+- name: PhilPapers
+  icon: ai ai-philpapers
+  url: https://philpeople.org/profiles/juan-r-loaiza
+
+- name: ResearchGate
+  icon: ai ai-researchgate
+  url: https://www.researchgate.net/profile/Juan_Loaiza5
