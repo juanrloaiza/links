@@ -2,7 +2,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   ssr: true,
-  devtools: { enabled: true },
   modules: [
     '@nuxt/content'
   ],
@@ -10,9 +9,15 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
+      title: "Juan R. Loaiza - Links",
       link: [{
         rel: "stylesheet",
         href: "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/logo.png"
       }]
     }
   },

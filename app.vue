@@ -28,7 +28,7 @@ const socialMedia: Array<Link> = socialMediaYAML.value.body
   <div class="min-h-screen bg-gradient-to-b from-slate-300 to-slate-100">
     <div class="container max-w-lg px-2 mx-auto py-20">
       <div class="flex flex-col justify-center items-center py-10 font-bold">
-        <img src="assets/logo.png" class="w-28 bg-white rounded-full p-1" />
+        <img src="/logo.png" class="w-28 bg-white rounded-full p-1" />
         <h1 class="text-4xl my-6">Juan R. Loaiza</h1>
         <p>Filósofo y académico (U. Alberto Hurtado)</p>
       </div>
