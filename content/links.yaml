@@ -1,20 +1,27 @@
 - name: Página personal
   url: "https://www.juanrloaiza.com/"
-  icon: "fa-solid fa-globe "
+  icon: 🖥️
 
 - name: Blog
   url: "https://blog.juanrloaiza.com/"
+  icon: ✏️
 
 - name: Santiago Mind and Cognition
   url: https://www.santiagomindandcognition.cl
   icon: 🧠
 
-- name: Emotions and the Problem of Variability
+- name: A History of Philosophy in Colombia through Topic Modelling. ArXiV [Preprint]
+  url: https://arxiv.org/abs/2412.04236
+  icon: 📃
+
+- name: "Emotions and the Problem of Variability. Review of Philosophy and Psychology."
   url: https://link.springer.com/article/10.1007/s13164-020-00492-8
   icon: 📃
 
 - name: '"Vigilar las emociones con IA es un problema público" - CIPER Chile'
   url: https://www.ciperchile.cl/2024/07/05/vigilar-las-emociones-con-ia-es-un-problema-publico/
+  icon: 📰
 
 - name: '"Justicia por mano propia: ¿herramienta legítima?" - Interferencia'
   url: https://interferencia.cl/articulos/justicia-por-mano-propia-herramienta-legitima
+  icon: 📰
