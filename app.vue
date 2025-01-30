@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import { marked } from 'marked';
+
 interface Link {
   name: string,
   url: string,
-  icon: string
+  icon: string,
+  parsedName?: string
 }
 
 interface YAMLArray {
@@ -17,14 +20,19 @@ if (!treeLinksYAML.value || !socialMediaYAML.value) {
   throw new Error("No data received")
 }
 
-const links: Array<Link> = treeLinksYAML.value.body
+const links: Array<Link> = await treeLinksYAML.value.body?.map((link:Link) => {
+  link.parsedName = marked.parseInline(link.name)
+  return link
+})
+
+console.log(links)
 
 const socialMedia: Array<Link> = socialMediaYAML.value.body
 
 </script>
 
 <template>
-  <Script src="https://kit.fontawesome.com/56ed2b6624.js" crossorigin="anonymous" />
+  <Script src="https://kit.fontawesome.com/56ed2b6624.js" ></Script>
   <div class="min-h-screen bg-gradient-to-b from-slate-300 to-slate-100">
     <div class="container max-w-lg px-2 mx-auto py-20">
       <div class="flex flex-col justify-center items-center py-10 font-bold">
@@ -34,12 +42,12 @@ const socialMedia: Array<Link> = socialMediaYAML.value.body
       </div>
       <div class="flex flex-col">
         <a v-for="link in links" :href="link.url">
+          
           <div
-            class="flex 
-            justify-center items-center text-center py-5 px-8 border-2 border-slate-300 rounded-2xl m-1 hover:bg-slate-300 font-semibold bg-white text-lg">
-            {{
-              link.name
-            }}
+            class="flex justify-space-around items-center text-center py-5 px-8 border-2 border-slate-300 rounded-2xl m-1 hover:bg-slate-300 font-semibold bg-white text-lg">
+           <span class="mr-auto">{{ link.icon }}</span>
+
+           <span class="mr-auto ml-3" v-html=link.parsedName />
           </div>
         </a>
       </div>
