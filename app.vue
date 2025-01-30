@@ -25,8 +25,6 @@ const links: Array<Link> = await treeLinksYAML.value.body?.map((link:Link) => {
   return link
 })
 
-console.log(links)
-
 const socialMedia: Array<Link> = socialMediaYAML.value.body
 
 </script>
